@@ -7,6 +7,15 @@ body {
     margin: 0;
 }
 
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+section header {
+    margin-bottom: 40px;
+}
+
 .header {
     height: 600px;
     width: 100%;
@@ -63,10 +72,20 @@ hr {
     
 }
 
-.menu {
-    display: inline;
-    padding: 15px;
+button {
+    display: none;
 }
+
+h2 {
+    font-size: 1.9em;
+    color: #333;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+
 
 .navigation {
     padding: 5px;
@@ -78,55 +97,207 @@ hr {
     color: #fff;
 }
 
+.menu {
+    display: inline;
+    padding: 15px;
+}
+
+
+
 .about {
     color: #777;
     text-align: center;
-    padding: 40px;
 }
 
+
+
 .about p {
-    margin: 50px 0;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
 }
 
 .about img {
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 60px;
     display: block;
   }
 
-h2 {
-    font-size: 1.9em;
-    color: #333;
-    text-align: center;
-    margin: 0;
-}
+
 
 .portfolio {
     background-color: #f2f1ed;
-    padding: 40px;
 }
 .container {
     display: flex;
     flex-wrap: wrap;
     max-width: 1140px;
-    margin: 30px 40px;
+    margin: auto;
 }
 
 .photo {
     width: 25%;
+    position: relative;
 }
 
 .photo img {
     width: 100%;
     height: 100%;
+}
+
+.photo p {
+    position: absolute;
+    background-color: transparent;
+    color: transparent;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    height: 100%;  
+    margin: 0;
+    transition: all .3s;
+}
+
+.photo p:hover {
+    color: white;
+    background-color: rgba(0, 123, 255, 0.8);
+    font-size: 2em;
+}
+
+
+
+
+
+form {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+textarea {
+    border: 1px solid;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+}   
+
+input {
+    border: 1px solid;
+    width: 49%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+input[type="submit"] {
+    cursor: pointer; 
+    width: auto;
+    margin: auto;
+    padding: 10px;
+    color: #333;
+    border: 1px solid #007bff;
+    background-color:  #fff;
+    text-transform: uppercase;
+    
+}
+
+::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+  }
+  
+  :-ms-input-placeholder { 
+    font-family: 'Open Sans', sans-serif; 
+    color: #333;
+  }
+  
+  ::-ms-input-placeholder {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+  }
+
+  .fab {
+      color: #007bff;
+      font-size: 3em;
+      
+  }
+
+  .fonts {
+      margin: auto;
+      width: 300px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+  }
+
+  footer {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #f2f1ed;
+    text-align: center;
+    padding: 30px;
+  }
+
+@media screen and (max-width:992px) {
+    .photo {
+        width: 50%
+    }
+}
+
+@media screen and (max-width:768px) {
+    .photo {
+        width: 100%;
     }
 
+    form {
+        width: 90%;
+        margin: auto
+    }
 
+    .container {
+        margin: auto;
+        width: 90%;
+    }
 
+    .about p {
+        width: 100%;
+        margin: auto;
+    }
+}
 
+@media screen and (max-width:480px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        display: block;
+    }
 
+    li {
+        margin: 0
+    }
 
+    .navigation ul {
+        display: none;
+    }
 
-  
+    .navigation ul.open {
+        display: block;
+    }
+
+    button {
+        display: block;
+        padding: 2vw;
+        font-size: 3vh;
+        background-color: #007bff;
+        border: none;
+        cursor: pointer;
+     }
+}
+
